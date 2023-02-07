@@ -43,7 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataReader.cs" />
+    <Compile Include="DatabaseObjectType.cs" />
+    <Compile Include="DatabaseObjectValueColumnIndex.cs" />
+    <Compile Include="DatabaseCsvParser.cs" />
+    <Compile Include="DatabaseObject.cs" />
+    <Compile Include="DatabaseObjectCollection.cs" />
+    <Compile Include="DatabaseObjectColumn.cs" />
+    <Compile Include="DatabaseObjectTable.cs" />
+    <Compile Include="DatabaseObjectDatabase.cs" />
+    <Compile Include="DatabaseObjectBuilder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
