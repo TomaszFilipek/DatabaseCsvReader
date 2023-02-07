@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseCsvReader", "DatabaseCsvReader\DatabaseCsvReader.csproj", "{D0836625-FD9E-416A-89C4-658E3255B44B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseCsvUnitTests", "DataCsvReaderUnitTests\DatabaseCsvUnitTests.csproj", "{B9181291-D2F4-4E7D-BB67-0859695E13F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D0836625-FD9E-416A-89C4-658E3255B44B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0836625-FD9E-416A-89C4-658E3255B44B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0836625-FD9E-416A-89C4-658E3255B44B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9181291-D2F4-4E7D-BB67-0859695E13F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9181291-D2F4-4E7D-BB67-0859695E13F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9181291-D2F4-4E7D-BB67-0859695E13F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9181291-D2F4-4E7D-BB67-0859695E13F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
