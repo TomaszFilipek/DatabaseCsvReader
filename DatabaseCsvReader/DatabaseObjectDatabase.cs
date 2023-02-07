@@ -1,6 +1,6 @@
-﻿namespace DatabaseCsvReader
+﻿namespace DatabaseCsv
 {
-    internal class DatabaseObjectDatabase : DatabaseObject
+    public class DatabaseObjectDatabase : DatabaseObject
     {
         public override string ToString()
         {

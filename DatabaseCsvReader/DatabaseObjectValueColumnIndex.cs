@@ -1,4 +1,4 @@
-﻿namespace DatabaseCsvReader
+﻿namespace DatabaseCsv
 {
     internal enum DatabaseObjectValueColumnIndex
     {

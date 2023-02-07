@@ -52,7 +52,7 @@
     <Compile Include="DatabaseObjectTable.cs" />
     <Compile Include="DatabaseObjectDatabase.cs" />
     <Compile Include="DatabaseObjectBuilder.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="DatabaseCsvReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿namespace DatabaseCsvReader
+﻿namespace DatabaseCsv
 {
     using System.Collections.Generic;
     using System.Linq;
@@ -41,6 +41,10 @@
         public IEnumerable<DatabaseObject> GetDatabaseObjectChildren(DatabaseObject parentDatabaseObject)
         {
             return databaseObjects.Where(o => o.ParentType == parentDatabaseObject.Type && o.ParentName == parentDatabaseObject.Name);
+        }
+        public IEnumerable<DatabaseObject> GetDatabaseObjects()
+        {
+            return databaseObjects;
         }
     }
 }

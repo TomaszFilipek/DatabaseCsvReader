@@ -1,4 +1,4 @@
-﻿namespace DatabaseCsvReader
+﻿namespace DatabaseCsv
 {
     using System;
     using System.IO;
