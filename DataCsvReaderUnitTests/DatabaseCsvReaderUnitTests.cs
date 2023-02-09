@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Xml.Linq;
 using Xunit;
 
 namespace DatabaseCsvUnitTests
@@ -237,6 +238,39 @@ namespace DatabaseCsvUnitTests
                 Action act = () => databaseCsvParser.ParseDataFromFile(fileToImport: testFileGenerator.FullPath, hasHeaderRecord: false);
 
                 Assert.Throws<Exception>(act);
+            }
+        }
+
+        [Fact]
+
+        public void ParseDataFromFile_IncorrectInvalidLineWithParameterIgnoreInvalidLinesSetFalse_FormatException()
+        {
+            string fileContent = $"column;xxx;;;;;";
+            using (TestFileGenerator testFileGenerator = new TestFileGenerator(fileContent))
+            {
+                var databaseCsvParser = new DatabaseCsvParser();
+                Action act = () => databaseCsvParser.ParseDataFromFile(fileToImport: testFileGenerator.FullPath, hasHeaderRecord: false, ignoreInvalidLines: false);
+
+                Assert.Throws<FormatException>(act);
+            }
+        }
+
+
+        [Fact]
+
+        public void ParseDataFromFile_IncorrectInvalidLineWithParameterIgnoreInvalidLinesSetTrue_DataReaderInvalidLineExceptionEventRaised()
+        {
+            bool eventRaised = false;
+
+            string fileContent = $"column;xxx;;;;;";
+            using (TestFileGenerator testFileGenerator = new TestFileGenerator(fileContent))
+            {
+                var databaseCsvParser = new DatabaseCsvParser();
+                databaseCsvParser.DatabaseParserInvalidLineException += (obj, eventArgs) => eventRaised = true;
+                var exception = Record.Exception(() => databaseCsvParser.ParseDataFromFile(fileToImport: testFileGenerator.FullPath, hasHeaderRecord: false, ignoreInvalidLines: true));
+                   
+                Assert.Null(exception);
+                Assert.True(eventRaised);
             }
         }
     }

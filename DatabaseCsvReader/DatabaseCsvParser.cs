@@ -16,7 +16,7 @@
         /// <param name="fileToImport">Path to parsed file.</param>
         /// <param name="skipEmptyLines">A parameter specifying whether blank lines should be skipped.</param>
         /// <param name="hasHeaderRecord">If true first line will be skipped.</param>
-        /// <param name="ignoreInvalidLines">If true, an exception will not be thrown in case of a line parsing error. Only the DataReaderInvalidLineException event will be raised </param>
+        /// <param name="ignoreInvalidLines">If true, an exception will not be thrown in case of a line parsing error. Only the DataReaderInvalidLineException event will be raised.</param>
         /// <returns>The <see cref="DatabaseObjectCollection"/>.</returns>
         public DatabaseObjectCollection ParseDataFromFile(string fileToImport, bool skipEmptyLines = true, bool hasHeaderRecord = true, bool ignoreInvalidLines = false)
         {
